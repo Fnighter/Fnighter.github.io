@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>zsh的安装 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Tips: The commands are all in archlinux platform. zsh的安装*安装之前建议先sudo pacman -Syu进行更新 1$ sudo pacman -S zsh 查看已安装的shell1$ chsh -l or you can use cat &#x2F;etc&#x2F;shells to list the shells you have installed. 执">
+<meta property="og:type" content="article">
+<meta property="og:title" content="zsh的安装">
+<meta property="og:url" content="http://example.com/2022/02/04/zsh%E5%AE%89%E8%A3%85/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Tips: The commands are all in archlinux platform. zsh的安装*安装之前建议先sudo pacman -Syu进行更新 1$ sudo pacman -S zsh 查看已安装的shell1$ chsh -l or you can use cat &#x2F;etc&#x2F;shells to list the shells you have installed. 执">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-04T13:23:38.000Z">
+<meta property="article:modified_time" content="2022-02-05T16:50:06.000Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="zsh">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-zsh安装" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/02/04/zsh%E5%AE%89%E8%A3%85/" class="article-date">
+  <time datetime="2022-02-04T13:23:38.000Z" itemprop="datePublished">2022-02-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%96%B0%E7%9A%84%E5%85%A5%E9%97%A8/">新的入门</a>►<a class="article-category-link" href="/categories/%E6%96%B0%E7%9A%84%E5%85%A5%E9%97%A8/Shell/">Shell</a>►<a class="article-category-link" href="/categories/%E6%96%B0%E7%9A%84%E5%85%A5%E9%97%A8/Shell/zsh/">zsh</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      zsh的安装
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Tips: The commands are all in archlinux platform.</p>
+<h2 id="zsh的安装"><a href="#zsh的安装" class="headerlink" title="zsh的安装"></a>zsh的安装</h2><p>*安装之前建议先<code>sudo pacman -Syu</code>进行更新</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">sudo pacman -S zsh</span></span><br></pre></td></tr></table></figure>
+<h2 id="查看已安装的shell"><a href="#查看已安装的shell" class="headerlink" title="查看已安装的shell"></a>查看已安装的shell</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">chsh -l</span></span><br></pre></td></tr></table></figure>
+<p>or you can use <code>cat /etc/shells</code> to list the shells you have installed.</p>
+<p>执行这条命令后，你可以看到类似以下的info：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[ljk@leejk ~]$ chsh -l</span><br><span class="line">/bin/sh</span><br><span class="line">/bin/bash</span><br><span class="line">/usr/bin/git-shell</span><br><span class="line">/bin/zsh</span><br><span class="line">/usr/bin/zsh</span><br></pre></td></tr></table></figure>
+<h2 id="更换默认的shell为zsh"><a href="#更换默认的shell为zsh" class="headerlink" title="更换默认的shell为zsh"></a>更换默认的shell为zsh</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">sudo chsh -s /usr/bin/zsh</span></span><br></pre></td></tr></table></figure>
+<p>重新登录后进入打开konsole会显示第一次使用，可以按提示进行配置。配置完成后会在 <strong>~/</strong> 下生成 <strong>.zshrc</strong> 配置文件。</p>
+<h2 id="配置zsh"><a href="#配置zsh" class="headerlink" title="配置zsh"></a>配置zsh</h2><p>切换shell后重新打开终端模拟器会提示对zsh进行配置，按 1 键就可以进入配置界面了：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Please pick one of the following options:</span><br><span class="line">(1)  Configure settings for history, i.e. command lines remembered</span><br><span class="line">     and saved by the shell.  (Recommended.)</span><br><span class="line">(2)  Configure the new completion system.  (Recommended.)</span><br><span class="line">(3)  Configure how keys behave when editing command lines.  (Recommended.）</span><br><span class="line">(4)  Pick some of the more common shell options.  These are simple &quot;on&quot;</span><br><span class="line">     or &quot;off&quot; switches controlling the shell&#x27;s features.  </span><br><span class="line">(0)  Exit, creating a blank ~/.zshrc file.</span><br><span class="line">(a)  Abort all settings and start from scratch.  Note this will overwrite</span><br><span class="line">     any settings from zsh-newuser-install already in the startup file.</span><br><span class="line">     It will not alter any of your other settings, however.</span><br><span class="line">(q)  Quit and do nothing else.  The function will be run again next time.</span><br><span class="line">--- Type one of the keys in parentheses --- </span><br></pre></td></tr></table></figure>
+<p>完成基本的zsh设置,使用cat查看配置文件内容如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">leejk% </span><span class="language-bash"><span class="built_in">cat</span> .zshrc</span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Lines configured by zsh-newuser-install</span></span><br><span class="line">HISTFILE=~/.histfile</span><br><span class="line">HISTSIZE=1000</span><br><span class="line">SAVEHIST=1000</span><br><span class="line">bindkey -e</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">End of lines configured by zsh-newuser-install</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">The following lines were added by compinstall</span></span><br><span class="line">zstyle :compinstall filename &#x27;/home/ljk/.zshrc&#x27;</span><br><span class="line"></span><br><span class="line">autoload -Uz compinit</span><br><span class="line">compinit</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">End of lines added by compinstall</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/02/04/zsh%E5%AE%89%E8%A3%85/" data-id="cl0xh8cq00007e2jg75qsc2xu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zsh/" rel="tag">zsh</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/02/05/%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%A4%96%E6%8E%A5%E6%98%BE%E7%A4%BA%E5%99%A8%E6%96%B9%E6%A1%88/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          使用autorandr的笔记本外接显示器方案
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/01/29/Hexo%E5%8D%9A%E5%AE%A2%E7%BC%96%E5%86%99/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hexo博客编写</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Archlinux/">Archlinux</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Archlinux/Settings/">Settings</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Archlinux/Settings/xrandr/">xrandr</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Archlinux/installation/">installation</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%B0%E7%9A%84%E5%85%A5%E9%97%A8/">新的入门</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%B0%E7%9A%84%E5%85%A5%E9%97%A8/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%B0%E7%9A%84%E5%85%A5%E9%97%A8/Shell/">Shell</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%B0%E7%9A%84%E5%85%A5%E9%97%A8/Shell/zsh/">zsh</a></li></ul></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/arch/" rel="tag">arch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grub/" rel="tag">grub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/systemd-boot/" rel="tag">systemd-boot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xrandr/" rel="tag">xrandr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zsh/" rel="tag">zsh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%96%E6%8E%A5%E6%98%BE%E7%A4%BA%E5%99%A8/" rel="tag">外接显示器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0%E6%9C%AC%E7%94%B5%E8%84%91/" rel="tag">笔记本电脑</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/arch/" style="font-size: 15px;">arch</a> <a href="/tags/grub/" style="font-size: 10px;">grub</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/systemd-boot/" style="font-size: 10px;">systemd-boot</a> <a href="/tags/xrandr/" style="font-size: 10px;">xrandr</a> <a href="/tags/zsh/" style="font-size: 10px;">zsh</a> <a href="/tags/%E5%A4%96%E6%8E%A5%E6%98%BE%E7%A4%BA%E5%99%A8/" style="font-size: 10px;">外接显示器</a> <a href="/tags/%E7%AC%94%E8%AE%B0%E6%9C%AC%E7%94%B5%E8%84%91/" style="font-size: 10px;">笔记本电脑</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/03/03/%E4%BD%BF%E7%94%A8systemd-boot%E4%BB%A3%E6%9B%BFgrub%E4%BD%9C%E4%B8%BAarchlinux%E5%BC%95%E5%AF%BC/">使用systemd-boot代替grub作为archlinux引导</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/05/%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%A4%96%E6%8E%A5%E6%98%BE%E7%A4%BA%E5%99%A8%E6%96%B9%E6%A1%88/">使用autorandr的笔记本外接显示器方案</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/04/zsh%E5%AE%89%E8%A3%85/">zsh的安装</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/29/Hexo%E5%8D%9A%E5%AE%A2%E7%BC%96%E5%86%99/">Hexo博客编写</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/28/My-First-Blog/">My First Blog</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
