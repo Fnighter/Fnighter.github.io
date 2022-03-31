@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>How to uninstall adhesive applications in Android | LeeHame's Blogs</title><meta name="keywords" content="Android,adb"><meta name="author" content="LeeHame"><meta name="copyright" content="LeeHame"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Preface:As we know, some applications called “XiaomiStore”, we can’t remove it in our smartphone. However, a tool named “adb”, which means Android Debug Bridge, gives us the freedom.This page will tel">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to uninstall adhesive applications in Android">
+<meta property="og:url" content="http://leejkee.github.io/2022/03/31/How-to-uninstall-adhesive-applications-in-Android/index.html">
+<meta property="og:site_name" content="LeeHame&#39;s Blogs">
+<meta property="og:description" content="Preface:As we know, some applications called “XiaomiStore”, we can’t remove it in our smartphone. However, a tool named “adb”, which means Android Debug Bridge, gives us the freedom.This page will tel">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2022-03-31T10:42:17.000Z">
+<meta property="article:modified_time" content="2022-03-31T17:31:28.635Z">
+<meta property="article:author" content="LeeHame">
+<meta property="article:tag" content="Android">
+<meta property="article:tag" content="adb">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://leejkee.github.io/2022/03/31/How-to-uninstall-adhesive-applications-in-Android/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?275b4263f048bbc274ff6123173fa906";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'How to uninstall adhesive applications in Android',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-04-01 01:31:28'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.1"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/BeiLuo.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">21</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">14</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">LeeHame's Blogs</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">How to uninstall adhesive applications in Android</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-03-31T10:42:17.000Z" title="发表于 2022-03-31 18:42:17">2022-03-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-31T17:31:28.635Z" title="更新于 2022-04-01 01:31:28">2022-04-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%96%B0%E7%9A%84%E5%85%A5%E9%97%A8/">新的入门</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%96%B0%E7%9A%84%E5%85%A5%E9%97%A8/adb/">adb</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="How to uninstall adhesive applications in Android"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div><article class="post-content" id="article-container"><p><font color=green>Preface:</font></b>As we know, some applications called “XiaomiStore”, we can’t remove it in our smartphone. However, a tool named “adb”, which means Android Debug Bridge, gives us the freedom.<br>This page will tell you what it is and how to use, a command line tool, which can remove the adhesive apps.  </p>
+<p><em><em><font color=red>Tips: This function is true only in <strong>Windows10</strong> .</font></b>This is my first blog in English, whose mistakes could be send to <code>cww.lhame@foxmail.com</code>.</em></em></p>
+<h1 id="Firstly-download-adb-for-your-windows-10"><a href="#Firstly-download-adb-for-your-windows-10" class="headerlink" title="Firstly, download adb for your windows 10."></a>Firstly, download adb for your windows 10.</h1><p>Visit this <a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/platform-tools_r33.0.1-windows.zip">page</a>, and save it in the path what you like.(Recommended in <code>C:\Users\ _*usename*_ \adb</code>)  </p>
+<p><code>\adb</code> is a directory created by yourself, you will get a “zip flie” called <code>platform-tools_r33.0.1-windows.zip</code> if you click the link above.</p>
+<p>Then you should extract it to this path, the final directory is like <code>C:\Users\LHame\adb\platform-tools</code>, where you can find the file <code>adb.exe</code>.  </p>
+<h1 id="Then-add-this-path-to-environment-variable"><a href="#Then-add-this-path-to-environment-variable" class="headerlink" title="Then, add this path to environment variable."></a>Then, add this path to environment variable.</h1><p>On Windows, just follow these steps:  </p>
+<ul>
+<li>copy the </li>
+<li>Right click <code>This computer</code>, chose <code>properties</code>(How to do for the disappear of my <code>This computer</code>? Right click on your desktop and chose the <code>Personalize</code>, <code>themes</code> on the left, <code>Desktop Icons Settings</code> upper right, ✔ the <code>computer</code>)</li>
+<li>Click <code>Advanced system settings</code> on the right</li>
+<li>Click <code>environment variable</code> on the bottom</li>
+<li>Chose the <code>path</code> in the <code>system variable</code>, then click <code>new</code>, <code>add</code>, paste what you copy before</li>
+<li>Finally, click the <code>OK</code> to save changes.  </li>
+</ul>
+<p><img src="/images/eg.gif"></p>
+<h1 id="Check-if-the-adb-is-OK"><a href="#Check-if-the-adb-is-OK" class="headerlink" title="Check if the adb is OK."></a>Check if the adb is OK.</h1><p>Open a terminal, a software we can do some interesting jobs with it, which can be installed by serching words including “terminal” in Microsoft Store. What’s more, you can chose press <code>Win</code> + <code>R</code> in keyboard to open the <code>CMD</code>, alse called <code>command prompt</code>.<br>Then ,type <code>adb version</code> and you should get some messages like here:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\LHame&gt; adb version</span><br><span class="line">Android Debug Bridge version 1.0.41</span><br><span class="line">Version 33.0.1-8253317</span><br><span class="line">Installed as C:\Users\LHame\adb\platform-tools\adb.exe</span><br></pre></td></tr></table></figure>
+
+<h1 id="changes-for-your-smartphone"><a href="#changes-for-your-smartphone" class="headerlink" title="changes for your smartphone"></a>changes for your smartphone</h1><p>This <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/429854110">page</a> will tell you how to do.<br>(Emmmm, I am a lazy boy, so I just link a post from Bing. Also many posts about how to unlock the USB-debug options for your mobile can be found. )</p>
+<p>Now, Evething is OK.  </p>
+<h1 id="Get-the-start"><a href="#Get-the-start" class="headerlink" title="Get the start."></a>Get the start.</h1><p>Type <code>adb devices</code> to list the infomation your smartphone, your will get message as:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\LHame&gt; adb devices</span><br><span class="line">List of devices attached</span><br><span class="line">xxxxxxxx        device</span><br></pre></td></tr></table></figure>
+<p>You can not make sure your mobile is OK until you have gotten the number of your device.(must be a number)</p>
+<h2 id="list-the-applications"><a href="#list-the-applications" class="headerlink" title="list the applications"></a>list the applications</h2><p>Type</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell pm list packages</span><br></pre></td></tr></table></figure>
+
+<p>for example:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\LHame&gt; adb shell pm list packages</span><br><span class="line">package:com.miui.screenrecorder</span><br><span class="line">package:com.qualcomm.qti.haven.telemetry.service</span><br><span class="line">package:com.android.cts.priv.ctsshim</span><br><span class="line">package:com.qualcomm.qti.auth.sampleextauthservice</span><br><span class="line">package:com.qualcomm.qti.perfdump</span><br><span class="line">package:com.android.providers.telephony</span><br><span class="line">package:com.miui.powerkeeper</span><br><span class="line">package:com.miui.qr</span><br><span class="line">package:com.mi.liveassistant</span><br><span class="line">package:org.codeaurora.bt_wipowersdk</span><br><span class="line">package:com.android.providers.calendar</span><br><span class="line">package:com.android.providers.media</span><br><span class="line">package:com.milink.service</span><br><span class="line">package:com.qti.service.colorservice</span><br><span class="line">package:com.xiaomi.powerchecker</span><br><span class="line">package:com.xiaomi.account</span><br><span class="line">package:com.android.wallpapercropper</span><br><span class="line">package:com.quicinc.cne.CNEService</span><br><span class="line">package:com.qualcomm.qti.autoregistration</span><br><span class="line">package:com.xiaomi.micloud.sdk</span><br><span class="line">package:com.qualcomm.qti.smcinvokepkgmgr</span><br><span class="line">package:com.android.updater</span><br><span class="line">package:com.leiting.xian</span><br><span class="line">package:com.android.documentsui</span><br><span class="line">package:com.android.externalstorage</span><br><span class="line">package:com.qualcomm.uimremoteclient</span><br><span class="line">package:com.xiaomi.gamecenter.sdk.service</span><br><span class="line">package:com.android.htmlviewer</span><br><span class="line">package:com.qualcomm.svi</span><br><span class="line">package:com.qualcomm.qti.uceShimService</span><br><span class="line">package:com.android.companiondevicemanager</span><br><span class="line">package:com.miui.gallery</span><br><span class="line">package:com.android.quicksearchbox</span><br><span class="line">package:com.android.mms.service</span><br><span class="line">package:com.android.providers.downloads</span><br><span class="line">package:com.qualcomm.qti.auth.sampleauthenticatorservice</span><br><span class="line">package:com.xiaomi.payment</span><br><span class="line">......</span><br><span class="line">......</span><br></pre></td></tr></table></figure>
+
+<h2 id="uninstall-what-you-want-to-remove"><a href="#uninstall-what-you-want-to-remove" class="headerlink" title="uninstall what you want to remove"></a>uninstall what you want to remove</h2><p>Type</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell pm uninstall --user 0 &lt;apps name&gt;</span><br></pre></td></tr></table></figure>
+<p>for example:<br>We want to remove a application called “XiaomiPayment”, we can find it from above list.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\LHame&gt; adb shell pm uninstall --user 0 com.xiaomi.payment</span><br><span class="line">Success</span><br></pre></td></tr></table></figure>
+<p>The app was uninstalled when we got “Success”.</p>
+<p>Of course, you shouldn’t remove some important packages(apps) for the Android.(You can get detials by Bing and Google.)</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">LeeHame</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://leejkee.github.io/2022/03/31/How-to-uninstall-adhesive-applications-in-Android/">http://leejkee.github.io/2022/03/31/How-to-uninstall-adhesive-applications-in-Android/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://leejkee.github.io" target="_blank">LeeHame's Blogs</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Android/">Android</a><a class="post-meta__tags" href="/tags/adb/">adb</a></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/03/29/Arduino%E8%BF%9E%E6%8E%A5DHT11/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Arduino连接DHT11</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/BeiLuo.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">LeeHame</div><div class="author-info__description">Praise what I like, but no acrimony to others.</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">21</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">14</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/leejkee"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://space.bilibili.com/382690242?spm_id_from=333.1007.0.0k" target="_blank" title="bilibili"><i class="fa-brands fa-bilibili"></i></a><a class="social-icon" href="https://github.com/leejkee" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:leejkee@yeah.net" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">西忆故城不可见，东风牵梦入长安。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Firstly-download-adb-for-your-windows-10"><span class="toc-number">1.</span> <span class="toc-text">Firstly, download adb for your windows 10.</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Then-add-this-path-to-environment-variable"><span class="toc-number">2.</span> <span class="toc-text">Then, add this path to environment variable.</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Check-if-the-adb-is-OK"><span class="toc-number">3.</span> <span class="toc-text">Check if the adb is OK.</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#changes-for-your-smartphone"><span class="toc-number">4.</span> <span class="toc-text">changes for your smartphone</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Get-the-start"><span class="toc-number">5.</span> <span class="toc-text">Get the start.</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#list-the-applications"><span class="toc-number">5.1.</span> <span class="toc-text">list the applications</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#uninstall-what-you-want-to-remove"><span class="toc-number">5.2.</span> <span class="toc-text">uninstall what you want to remove</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/03/31/How-to-uninstall-adhesive-applications-in-Android/" title="How to uninstall adhesive applications in Android"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="How to uninstall adhesive applications in Android"/></a><div class="content"><a class="title" href="/2022/03/31/How-to-uninstall-adhesive-applications-in-Android/" title="How to uninstall adhesive applications in Android">How to uninstall adhesive applications in Android</a><time datetime="2022-03-31T10:42:17.000Z" title="发表于 2022-03-31 18:42:17">2022-03-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/29/Arduino%E8%BF%9E%E6%8E%A5DHT11/" title="Arduino连接DHT11"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Arduino连接DHT11"/></a><div class="content"><a class="title" href="/2022/03/29/Arduino%E8%BF%9E%E6%8E%A5DHT11/" title="Arduino连接DHT11">Arduino连接DHT11</a><time datetime="2022-03-29T12:12:09.000Z" title="发表于 2022-03-29 20:12:09">2022-03-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/28/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E5%85%A5%E9%97%A8%EF%BC%88-%EF%BC%89/" title="机器视觉入门（-）"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="机器视觉入门（-）"/></a><div class="content"><a class="title" href="/2022/03/28/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E5%85%A5%E9%97%A8%EF%BC%88-%EF%BC%89/" title="机器视觉入门（-）">机器视觉入门（-）</a><time datetime="2022-03-28T02:56:06.000Z" title="发表于 2022-03-28 10:56:06">2022-03-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/26/%E4%BD%BF%E7%94%A8systemd%E7%AE%A1%E7%90%86network/" title="使用systemd管理network"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用systemd管理network"/></a><div class="content"><a class="title" href="/2022/03/26/%E4%BD%BF%E7%94%A8systemd%E7%AE%A1%E7%90%86network/" title="使用systemd管理network">使用systemd管理network</a><time datetime="2022-03-26T01:58:43.000Z" title="发表于 2022-03-26 09:58:43">2022-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/20/%E8%A7%A3%E5%86%B3%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9C%B0%E5%9D%80%E6%A0%8F-%E6%A0%87%E7%AD%BE%E6%A0%8F%E8%BF%87%E5%B0%8F%E9%97%AE%E9%A2%98/" title="解决浏览器地址栏/标签栏过小问题"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="解决浏览器地址栏/标签栏过小问题"/></a><div class="content"><a class="title" href="/2022/03/20/%E8%A7%A3%E5%86%B3%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9C%B0%E5%9D%80%E6%A0%8F-%E6%A0%87%E7%AD%BE%E6%A0%8F%E8%BF%87%E5%B0%8F%E9%97%AE%E9%A2%98/" title="解决浏览器地址栏/标签栏过小问题">解决浏览器地址栏/标签栏过小问题</a><time datetime="2022-03-20T05:24:33.000Z" title="发表于 2022-03-20 13:24:33">2022-03-20</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By LeeHame</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
